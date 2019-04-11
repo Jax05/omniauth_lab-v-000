@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
   def create
-    if @user = User.find_or_create_by(uid: auth['uid'])
+    @user = User.find_or_create_by(uid: auth['uid']) do |user|
       session[:user_id] = @user.id
     end
   end
