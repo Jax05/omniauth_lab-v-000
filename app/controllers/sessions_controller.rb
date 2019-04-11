@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
     session[:user_id] = @user.id
 
-    render 'welcome/root'
+    render 'welcome/home'
   end
 
   private
